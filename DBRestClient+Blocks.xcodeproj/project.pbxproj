@@ -22,6 +22,10 @@
 		BE12C3441921CD9800944612 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE12C3231921CD9800944612 /* UIKit.framework */; };
 		BE12C34C1921CD9800944612 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE12C34A1921CD9800944612 /* InfoPlist.strings */; };
 		BE12C34E1921CD9800944612 /* DBRestClient_BlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE12C34D1921CD9800944612 /* DBRestClient_BlocksTests.m */; };
+		BE12C35A1921CEAC00944612 /* DropboxSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE12C3591921CEAC00944612 /* DropboxSDK.framework */; };
+		BE12C35C1921CEC400944612 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE12C35B1921CEC400944612 /* Security.framework */; };
+		BE12C35E1921CECB00944612 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE12C35D1921CECB00944612 /* QuartzCore.framework */; };
+		BE12C3671921CF8000944612 /* DBRestClient+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = BE12C3661921CF8000944612 /* DBRestClient+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +59,11 @@
 		BE12C3491921CD9800944612 /* DBRestClient+BlocksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DBRestClient+BlocksTests-Info.plist"; sourceTree = "<group>"; };
 		BE12C34B1921CD9800944612 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BE12C34D1921CD9800944612 /* DBRestClient_BlocksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBRestClient_BlocksTests.m; sourceTree = "<group>"; };
+		BE12C3591921CEAC00944612 /* DropboxSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxSDK.framework; sourceTree = "<group>"; };
+		BE12C35B1921CEC400944612 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BE12C35D1921CECB00944612 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BE12C3651921CF8000944612 /* DBRestClient+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DBRestClient+Blocks.h"; path = "Source/DBRestClient+Blocks.h"; sourceTree = SOURCE_ROOT; };
+		BE12C3661921CF8000944612 /* DBRestClient+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DBRestClient+Blocks.m"; path = "Source/DBRestClient+Blocks.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE12C35E1921CECB00944612 /* QuartzCore.framework in Frameworks */,
+				BE12C35C1921CEC400944612 /* Security.framework in Frameworks */,
+				BE12C35A1921CEAC00944612 /* DropboxSDK.framework in Frameworks */,
 				BE12C3221921CD9800944612 /* CoreGraphics.framework in Frameworks */,
 				BE12C3241921CD9800944612 /* UIKit.framework in Frameworks */,
 				BE12C3201921CD9800944612 /* Foundation.framework in Frameworks */,
@@ -103,10 +115,8 @@
 		BE12C31E1921CD9800944612 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE12C31F1921CD9800944612 /* Foundation.framework */,
-				BE12C3211921CD9800944612 /* CoreGraphics.framework */,
-				BE12C3231921CD9800944612 /* UIKit.framework */,
-				BE12C3411921CD9800944612 /* XCTest.framework */,
+				BE12C3571921CE9200944612 /* Apple */,
+				BE12C3581921CE9A00944612 /* Dropbox */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -114,14 +124,13 @@
 		BE12C3251921CD9800944612 /* DBRestClient+Blocks */ = {
 			isa = PBXGroup;
 			children = (
-				BE12C32E1921CD9800944612 /* AppDelegate.h */,
-				BE12C32F1921CD9800944612 /* AppDelegate.m */,
-				BE12C3311921CD9800944612 /* Main_iPhone.storyboard */,
-				BE12C3341921CD9800944612 /* Main_iPad.storyboard */,
-				BE12C3371921CD9800944612 /* ViewController.h */,
-				BE12C3381921CD9800944612 /* ViewController.m */,
+				BE12C3601921CEE700944612 /* AppDelegate */,
 				BE12C33A1921CD9800944612 /* Images.xcassets */,
+				BE12C35F1921CEDC00944612 /* Storyboards */,
 				BE12C3261921CD9800944612 /* Supporting Files */,
+				BE12C3611921CEEE00944612 /* ViewControllers */,
+				BE12C3651921CF8000944612 /* DBRestClient+Blocks.h */,
+				BE12C3661921CF8000944612 /* DBRestClient+Blocks.m */,
 			);
 			path = "DBRestClient+Blocks";
 			sourceTree = "<group>";
@@ -153,6 +162,54 @@
 				BE12C34A1921CD9800944612 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE12C3571921CE9200944612 /* Apple */ = {
+			isa = PBXGroup;
+			children = (
+				BE12C35D1921CECB00944612 /* QuartzCore.framework */,
+				BE12C35B1921CEC400944612 /* Security.framework */,
+				BE12C31F1921CD9800944612 /* Foundation.framework */,
+				BE12C3211921CD9800944612 /* CoreGraphics.framework */,
+				BE12C3231921CD9800944612 /* UIKit.framework */,
+				BE12C3411921CD9800944612 /* XCTest.framework */,
+			);
+			name = Apple;
+			sourceTree = "<group>";
+		};
+		BE12C3581921CE9A00944612 /* Dropbox */ = {
+			isa = PBXGroup;
+			children = (
+				BE12C3591921CEAC00944612 /* DropboxSDK.framework */,
+			);
+			name = Dropbox;
+			sourceTree = "<group>";
+		};
+		BE12C35F1921CEDC00944612 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BE12C3311921CD9800944612 /* Main_iPhone.storyboard */,
+				BE12C3341921CD9800944612 /* Main_iPad.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		BE12C3601921CEE700944612 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				BE12C32E1921CD9800944612 /* AppDelegate.h */,
+				BE12C32F1921CD9800944612 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		BE12C3611921CEEE00944612 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE12C3371921CD9800944612 /* ViewController.h */,
+				BE12C3381921CD9800944612 /* ViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE12C3671921CF8000944612 /* DBRestClient+Blocks.m in Sources */,
 				BE12C3391921CD9800944612 /* ViewController.m in Sources */,
 				BE12C3301921CD9800944612 /* AppDelegate.m in Sources */,
 				BE12C32C1921CD9800944612 /* main.m in Sources */,
@@ -390,6 +448,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBRestClient+Blocks/DBRestClient+Blocks-Prefix.pch";
 				INFOPLIST_FILE = "DBRestClient+Blocks/DBRestClient+Blocks-Info.plist";
@@ -403,6 +465,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBRestClient+Blocks/DBRestClient+Blocks-Prefix.pch";
 				INFOPLIST_FILE = "DBRestClient+Blocks/DBRestClient+Blocks-Info.plist";
